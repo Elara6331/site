@@ -1,0 +1,25 @@
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "Arsen's Site"
+#logo = "img/logo.jpg"
+#description = "My awesome website"
+copyright = "Copyright &copy; Arsen Musayelyan"
+
+dateFormat = "January 2, 2006"
+
+[author]
+  name = "Arsen Musayelyan"
+  image = "img/arsen-musayelyan.jpg"
+  headline = "Software Engineer"
+  bio = "A little bit about you"
+  links = [
+    { email = "mailto:arsen@arsenm.dev" },
+    { gitea = "https://gitea.arsenm.dev/Arsen6331" },
+    { github = "https://github.com/Arsen6331" },
+    { linkedin = "https://www.linkedin.com/in/arsen-musayelyan-9a850a1ab/" },
+  ]
