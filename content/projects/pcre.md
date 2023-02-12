@@ -12,20 +12,16 @@ weight = 10
 
 ## How it works
 
-There is an amazing program called [ccgo](https://pkg.go.dev/modernc.org/ccgo/v3). This is a transpiler that converts C code to Go. It was used to compile the source code of PCRE2 to Go. 
+The implementation leverages a remarkable tool known as [ccgo](https://pkg.go.dev/modernc.org/ccgo/v3), which is a compiler that converts C code into Go. The source code of PCRE2 was converted to Go using `ccgo`. I only have `linux/amd64` and `linux/arm64` systems, so cross-compilation using various C toolchains was performed and tested using `qemu-user-static` to emulate the desired CPU architectures.
 
-Unfortunately, `ccgo` does create OS and CPU architecture-specific code but I only have `linux/amd64` and `linux/arm64` systems, so I used various C cross-compiler toolchains to compile to the desired target, then used `qemu-user-static` to emulate the CPU arcitectures in order to test the cross-compiled code.
+For macOS, the process was more intricate as there is no suitable cross-compilation toolchain from Linux. Therefore, a macOS Virtual Machine was created using [OSX-KVM](https://github.com/kholia/OSX-KVM) and used to build PCRE2 for `darwin/amd64` and `darwin/arm64`.
 
-For macOS, the process was a little more complicated. Since there isn't a straightforward cross-compile toolchain for macOS from Linux as far as I know, I ran a macOS VM, which I created using this project: https://github.com/kholia/OSX-KVM. With that VM, I transpiled PCRE2 to both `darwin/amd64` and `darwin/arm64`.
+Once the code was converted, a memory-safe interface was created on top of it. This interface adheres to the conventions used in Go's standard library `regexp` package, so it can be used as a drop-in replacement.
 
-## Why
+## Motivation
 
-The reason I created this is that Go's standard library [`regexp`](https://pkg.go.dev/regexp) is missing features such as lookaheads and lookbehinds. There is a good reason for this. Due to the omission of those features, Go's `regexp` library can guarantee that regular expressions cannot be exploited for a DoS attack, known as a ReDoS attack.
+Go's standard library [`regexp`](https://pkg.go.dev/regexp) package lacks features like lookaheads and lookbehinds. This was intentional, as it guarantees that regular expressions cannot be exploited for a Denial-of-Service (DoS) attack, known as a ReDoS attack. However, there are cases where these features are necessary, and the expression is compiled into the program or provided in a configuration file, so the source is trusted.
 
-This seems like a big deal, and it is in many cases, but not in all cases. For example, if the expression is compiled into the program or provided in a config file, the source is trusted and therefore can be used without worrying about DoS attacks. Some applications also require the features in order to function properly, and they might have a different way to ensure no DoS attack occurs. In these cases, PCRE2 provides extra features without sacrificing anything. This is why I made this project, to allow these use cases to exist.
+## When to avoid
 
-It also mimics the standard library as closely as possible, meaning it can be used in conjunction with interfaces to provide different regular expression engines based on input, which may be useful in some cases.
-
-## When not to use
-
-Due to the extra features such as lookaheads and lookbehinds, PCRE2 is vulnerable to an attack known as ReDoS. This is where an expression is provided that recurses infinitely, consuming resources forever until there are none left for anything else. This means, if you don't need the features and can't trust the source of the expression, do not use this. Use Go's standard library `regexp` instead.
+It is important to note that PCRE2 is vulnerable to ReDoS attacks because of its extra features, such as lookaheads and lookbehinds. If the source of the expression cannot be trusted, it is advisable not to use PCRE2, and instead use the Go standard library `regexp` package.
