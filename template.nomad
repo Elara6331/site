@@ -1,53 +1,53 @@
 job "site" {
-	region = "global"
-	datacenters = ["dc1"]
-	type = "service"
+  region      = "global"
+  datacenters = ["dc1"]
+  type        = "service"
 
-	group "site" {
-		count = 2
+  group "site" {
+    count = 2
 
-		network {
-			port "nginx" {
-				to = 80
-			}
-		}
+    network {
+      port "nginx" {
+        to = 80
+      }
+    }
 
-		task "nginx" {
-			driver = "docker"
-			
-			env {
-			    // Hack to force Nomad to re-deploy the service
-			    // instead of ignoring it
-			    COMMIT_SHA = "${DRONE_COMMIT_SHA}"
-            }
+    task "nginx" {
+      driver = "docker"
 
-			config {
-				image = "nginx:latest"
-				ports = ["nginx"]
-				volumes = ["local/site/public:/usr/share/nginx/html:ro"]
-			}
-			
-			artifact {
-				source = "https://api.minio.arsenm.dev/site/site.tar.gz"
-				destination = "local/site"
-			}
+      env {
+        // Hack to force Nomad to re-deploy the service
+        // instead of ignoring it
+        COMMIT_SHA = "${DRONE_COMMIT_SHA}"
+      }
 
-			service {
-				name = "site"
-				port = "nginx"
+      config {
+        image   = "nginx:latest"
+        ports   = ["nginx"]
+        volumes = ["local/site/public:/usr/share/nginx/html:ro"]
+      }
 
-				tags = [
-					"traefik.enable=true",
+      artifact {
+        source      = "https://api.minio.arsenm.dev/site/site.tar.gz"
+        destination = "local/site"
+      }
 
-					"traefik.http.middlewares.site-redir.redirectRegex.regex=^https://arsenm\\.dev",
-					"traefik.http.middlewares.site-redir.redirectRegex.replacement=https://www.arsenm.dev",
-					"traefik.http.middlewares.site-redir.redirectRegex.permanent=true",
-					
-					"traefik.http.routers.site.rule=Host(`arsenm.dev`) || Host(`www.arsenm.dev`)",
-					"traefik.http.routers.site.middlewares=site-redir",
-					"traefik.http.routers.site.tls.certResolver=letsencrypt",
-				]
-			}
-		}
-	}
+      service {
+        name = "site"
+        port = "nginx"
+
+        tags = [
+          "traefik.enable=true",
+
+          "traefik.http.middlewares.site-redir.redirectRegex.regex=^https://arsenm\\.dev",
+          "traefik.http.middlewares.site-redir.redirectRegex.replacement=https://www.arsenm.dev",
+          "traefik.http.middlewares.site-redir.redirectRegex.permanent=true",
+
+          "traefik.http.routers.site.rule=Host(`arsenm.dev`) || Host(`www.arsenm.dev`)",
+          "traefik.http.routers.site.middlewares=site-redir",
+          "traefik.http.routers.site.tls.certResolver=letsencrypt",
+        ]
+      }
+    }
+  }
 }
