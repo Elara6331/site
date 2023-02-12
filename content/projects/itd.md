@@ -2,7 +2,7 @@
 title = "ITD"
 date = "2022-09-13"
 summary = "Linux companion daemon for the PineTime smartwatch"
-weight = 30
+weight = 20
 +++
 
 # ITD - InfiniTime Daemon
