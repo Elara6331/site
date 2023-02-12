@@ -14,6 +14,10 @@ job "site" {
 
 		task "nginx" {
 			driver = "docker"
+			
+			env {
+			    COMMIT_SHA = "${DRONE_COMMIT_SHA}"
+            }
 
 			config {
 				image = "nginx:latest"
