@@ -16,6 +16,8 @@ job "site" {
 			driver = "docker"
 			
 			env {
+			    // Hack to force Nomad to re-deploy the service
+			    // instead of ignoring it
 			    COMMIT_SHA = "${DRONE_COMMIT_SHA}"
             }
 
