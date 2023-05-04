@@ -1,6 +1,6 @@
 +++
 title = "Home"
-description = "Homepage for Arsen's Site"
+description = "Homepage for Elara's Site"
 slug = "home"
 +++
 
