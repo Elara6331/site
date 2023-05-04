@@ -24,9 +24,9 @@ installPkg() {
   fi
   
   case $1 in
-  pacman) $rootCmd pacman -U ${@:2} ;;
+  pacman) $rootCmd pacman --noconfirm -U ${@:2} ;;
   apk) $rootCmd apk add --allow-untrusted ${@:2} ;;
-  *) $rootCmd $1 install ${@:2} ;;
+  *) $rootCmd $1 install -y ${@:2} ;;
   esac
 }
 
@@ -64,11 +64,11 @@ else
   error "No supported package manager detected!"
 fi
 
-latestVersion=$(curl -sI 'https://gitea.arsenm.dev/Arsen6331/lure/releases/latest' | grep -o 'location: .*' | rev | cut -d '/' -f1 | rev | tr -d '[:space:]')
+latestVersion=$(curl -sI 'https://gitea.elara.ws/Elara6331/lure/releases/latest' | grep -o 'location: .*' | rev | cut -d '/' -f1 | rev | tr -d '[:space:]')
 info "Found latest LURE version:" $latestVersion
 
 fname="$(mktemp -u -p /tmp "lure.XXXXXXXXXX").${pkgFormat}"
-url="https://gitea.arsenm.dev/Arsen6331/lure/releases/download/${latestVersion}/linux-user-repository-${latestVersion#v}-linux-$(uname -m).${pkgFormat}"
+url="https://gitea.elara.ws/Elara6331/lure/releases/download/${latestVersion}/linux-user-repository-${latestVersion#v}-linux-$(uname -m).${pkgFormat}"
 
 info "Downloading LURE package" 
 curl -L $url -o $fname
