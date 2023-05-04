@@ -5,21 +5,21 @@ isoCode = "en"
 weight = 1
 rtl = false
 
-title = "Arsen's Site"
+title = "Elara's Site"
 #logo = "img/logo.jpg"
 #description = "My awesome website"
-copyright = "Copyright &copy; Arsen Musayelyan"
+copyright = "Copyright &copy; Elara Musayelyan"
 
 dateFormat = "January 2, 2006"
 
 [author]
-  name = "Arsen Musayelyan"
-  image = "img/arsen-musayelyan.jpg"
+  name = "Elara Musayelyan"
+  image = "img/nebula.jpg"
   headline = "Software Engineer"
   bio = "A little bit about you"
   links = [
     { email = "mailto:arsen@arsenm.dev" },
-    { gitea = "https://gitea.arsenm.dev/Arsen6331" },
-    { github = "https://github.com/Arsen6331" },
-    { linkedin = "https://www.linkedin.com/in/arsen-musayelyan-9a850a1ab/" },
+    { gitea = "https://gitea.elara.ws/Elara6331" },
+    { github = "https://github.com/Elara" },
+    #{ linkedin = "https://www.linkedin.com/in/arsen-musayelyan-9a850a1ab/" },
   ]

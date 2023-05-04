@@ -28,7 +28,7 @@ job "site" {
       }
 
       artifact {
-        source      = "https://api.minio.arsenm.dev/site/site.tar.gz"
+        source      = "https://api.minio.elara.ws/site/site.tar.gz"
         destination = "local/site"
       }
 
@@ -39,11 +39,11 @@ job "site" {
         tags = [
           "traefik.enable=true",
 
-          "traefik.http.middlewares.site-redir.redirectRegex.regex=^https://arsenm\\.dev",
-          "traefik.http.middlewares.site-redir.redirectRegex.replacement=https://www.arsenm.dev",
+          "traefik.http.middlewares.site-redir.redirectRegex.regex=^https://elara\\.ws",
+          "traefik.http.middlewares.site-redir.redirectRegex.replacement=https://www.elara.ws",
           "traefik.http.middlewares.site-redir.redirectRegex.permanent=true",
 
-          "traefik.http.routers.site.rule=Host(`arsenm.dev`) || Host(`www.arsenm.dev`)",
+          "traefik.http.routers.site.rule=Host(`elara.ws`) || Host(`www.elara.ws`)",
           "traefik.http.routers.site.middlewares=site-redir",
           "traefik.http.routers.site.tls.certResolver=letsencrypt",
         ]

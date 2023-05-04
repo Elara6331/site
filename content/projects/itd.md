@@ -7,7 +7,7 @@ weight = 20
 
 # ITD - InfiniTime Daemon
 
-[ITD](https://gitea.arsenm.dev/Arsen6331/itd), short for InfiniTime Daemon, is one of my biggest and most-used projects. It's a companion daemon for the PineTime smartwatch on Linux, functioning similarly to the Watch app on iOS, but on Linux and for the PineTime instead of the Apple Watch.
+[ITD](https://gitea.elara.ws/Elara6331/itd), short for InfiniTime Daemon, is one of my biggest and most-used projects. It's a companion daemon for the PineTime smartwatch on Linux, functioning similarly to the Watch app on iOS, but on Linux and for the PineTime instead of the Apple Watch.
 
 The daemon runs in the background and manages Bluetooth communication with the watch. Upon startup, it exposes a UNIX socket to accept API requests from the frontends, including `itctl` (a CLI frontend) and `itgui` (a GUI frontend).
 

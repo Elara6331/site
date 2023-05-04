@@ -8,7 +8,7 @@ pipeline:
   upload:
     image: plugins/s3
     settings:
-      endpoint: https://api.minio.arsenm.dev
+      endpoint: https://api.minio.elara.ws
       path_style: true
       bucket: site
       access_key: AkdgUdmzEJBoiYa2

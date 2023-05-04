@@ -8,7 +8,7 @@ weight = 10
 
 ## About
 
-[PCRE](https://gitea.arsenm.dev/Arsen6331/pcre) is a CGo-free port of the PCRE2 regular expression engine to Go. Being CGo-free means that rather than just being bindings to the PCRE2 library, this is a pure Go implementation of PCRE2.
+[PCRE](https://gitea.elara.ws/Elara6331/pcre) is a CGo-free port of the PCRE2 regular expression engine to Go. Being CGo-free means that rather than just being bindings to the PCRE2 library, this is a pure Go implementation of PCRE2.
 
 ## How it works
 

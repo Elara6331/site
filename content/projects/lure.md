@@ -8,7 +8,7 @@ weight = 30
 
 ## About
 
-[LURE](https://lure.arsenm.dev/) is a major project that I am currently working on. It allows Linux users to install software not otherwise available in their distro's repositories. It functions in a similar manner to Arch Linux's AUR, but works for any supported distro.
+[LURE](https://lure.elara.ws/) is a major project that I'm currently working on. It allows Linux users to install software not otherwise available in their distro's repositories. It functions in a similar manner to Arch Linux's AUR, but works for any supported distro.
 
 ## How it works
 
@@ -20,4 +20,4 @@ Arch Linux has a feature called the AUR, which allows any user to submit a packa
 
 ## Problems with this approach
 
-As has been rightfully pointed out by several people, trying to handle the various differences between the software available on each distro, especially library versions, is very difficult. This is not a problem LURE intends to solve. It simply provides a way for developers to automate the procedure of installing their software, so that their users don't have to figure it out themselves. This means that developers will have to handle some of those differences, such as dependency naming. However, LURE will help wherever it can, providing helper commands to create packages that adhere to the guidelines of the distro the package is being built for.
+Trying to handle the various differences between the software available on each distro, especially library versions, is very difficult. This is not a problem LURE intends to solve. It simply provides a way for developers to automate the procedure of installing their software, so that their users don't have to figure it out themselves. This means that developers will have to handle some of those differences, such as dependency naming. However, LURE will help wherever it can, providing helper commands to create packages that adhere to the guidelines of the distro the package is being built for.
