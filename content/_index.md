@@ -9,7 +9,7 @@ About Me
 {{</button>}}
 
 <span style="margin-left: 5px;">
-{{<button href="/projects">}}
-Projects
+{{<button href="/articles">}}
+Articles
 {{</button>}}
 </span>
