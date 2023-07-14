@@ -1,3 +1,10 @@
+title = "Elara's Site"
+#logo = "img/logo.jpg"
+#description = "My awesome website"
+copyright = "Copyright &copy; Elara Musayelyan"
+
+dateFormat = "January 2, 2006"
+
 [languages.en.params]
   languageCode = "en"
   languageName = "English"
@@ -5,13 +12,6 @@
   isoCode = "en"
   weight = 1
   rtl = false
-
-title = "Elara's Site"
-#logo = "img/logo.jpg"
-#description = "My awesome website"
-copyright = "Copyright &copy; Elara Musayelyan"
-
-dateFormat = "January 2, 2006"
 
 [author]
   name = "Elara Musayelyan"

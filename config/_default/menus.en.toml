@@ -26,6 +26,11 @@
   weight = 30
 
 [[main]]
+  name = "Articles"
+  pageRef = "articles"
+  weight = 40
+
+[[main]]
   name = "Source Code"
   url = "https://gitea.elara.ws/Elara6331/site"
 
