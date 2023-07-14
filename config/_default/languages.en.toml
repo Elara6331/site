@@ -1,9 +1,10 @@
-languageCode = "en"
-languageName = "English"
-displayName = "EN"
-isoCode = "en"
-weight = 1
-rtl = false
+[languages.en.params]
+  languageCode = "en"
+  languageName = "English"
+  displayName = "EN"
+  isoCode = "en"
+  weight = 1
+  rtl = false
 
 title = "Elara's Site"
 #logo = "img/logo.jpg"
@@ -20,6 +21,6 @@ dateFormat = "January 2, 2006"
   links = [
     { email = "mailto:elara@elara.ws" },
     { gitea = "https://gitea.elara.ws/Elara6331" },
-    { github = "https://github.com/Elara" },
+    { github = "https://github.com/Elara6331" },
     #{ linkedin = "https://www.linkedin.com/in/arsen-musayelyan-9a850a1ab/" },
   ]
