@@ -7,15 +7,8 @@ slug = "about"
 
 Hello! I'm Elara Musayelyan, also sometimes known as Elara6331 or Heisenbug online.
 
-I'm very passionate about software development, automation, microcontrollers, and open-source projects in general. I love learning new things and experimenting to find new and interesting applications for the things I've learned.
+I'm very passionate about programming and open-source software. I really enjoy contributing to the community by creating open-source projects and contributing to existing projects. My favorite topics include embedded software, cryptography, automation, networking, and the Linux operating system.
 
-In my free time, I work on anything from DIY microcontroller gadgets to contributions to open-source projects.
+I also maintain a server cluster consisting mostly of various ARM single-board computers that I use to self-host various online services. I use Hashicorp's Nomad and Consul, as well as the Traefik reverse proxy, to automate that process.
 
-I've contributed to several projects, such as [TinyGo](https://github.com/tinygo-org), [InfiniTime](https://github.com/InfiniTimeOrg/InfiniTime), and [GoReleaser](https://github.com/goreleaser/goreleaser).
-
-I also have many of my own open-source projects, some of which are listed on the [projects page](/projects) of this site, and the rest can be found on my [Gitea](https://gitea.elara.ws/Elara6331) or mirrored to my [GitHub](https://github.com/Elara6331).
-
-Online Profiles:
-
-- [Gitea](https://gitea.elara.ws/Elara6331)
-- [GitHub](https://github.com/Elara6331)
+You can see my projects and contributions on my [Gitea instance](https://gitea.elara.ws/Elara6331), or mirrored to my [Github](https://github.com/Elara6331).
