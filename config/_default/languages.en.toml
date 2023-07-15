@@ -3,12 +3,11 @@ title = "Elara's Site"
 #description = "My awesome website"
 copyright = "Copyright &copy; Elara Musayelyan"
 
-dateFormat = "January 2, 2006"
-
 [languages.en.params]
   languageCode = "en"
   languageName = "English"
   displayName = "EN"
+  dateFormat = "January 2, 2006"
   isoCode = "en"
   weight = 1
   rtl = false
