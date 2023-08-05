@@ -2,7 +2,7 @@
 title = "Nordic DFU over BLE"
 date = "2023-07-14"
 summary = "Using Nordic Semiconductor's DFU protocol over Bluetooth Low Energy"
-tags = ["pinetime", "ble", "itd"]
+tags = ["pine64", "pinetime", "ble", "itd"]
 +++
 
 I maintain a project called [ITD](https://gitea.elara.ws/Elara6331/itd), a companion app for Pine64's [PineTime](https://www.pine64.org/pinetime/) smartwatch. The PineTime uses a Nordic nRF52832 SoC and implements the Nordic DFU protocol. I found the documentation for this protocol on Nordic's site to be severely lacking and had to resort to digging through source code to implement it properly. In this article, I'll explain exactly how to upgrade your firmware over BLE using the information that I've learned.

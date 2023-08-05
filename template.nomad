@@ -7,12 +7,12 @@ job "site" {
     count = 2
 
     network {
-      port "nginx" {
-        to = 80
+      port "http" {
+        to = 8000
       }
     }
 
-    task "nginx" {
+    task "webserver" {
       driver = "docker"
 
       env {
@@ -22,9 +22,9 @@ job "site" {
       }
 
       config {
-        image   = "nginx:latest"
-        ports   = ["nginx"]
-        volumes = ["local/site/public:/usr/share/nginx/html:ro"]
+        image   = "gitea.elara.ws/elara6331/webserver:latest"
+        ports   = ["http"]
+        volumes = ["local/site/public:/html:ro"]
       }
 
       artifact {
@@ -34,7 +34,7 @@ job "site" {
 
       service {
         name = "site"
-        port = "nginx"
+        port = "http"
 
         tags = [
           "traefik.enable=true",
