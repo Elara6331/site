@@ -1,6 +1,6 @@
 +++
-title = "Running Nomad and Consul on RISC-V"
-date = "2023-07-28"
+title = "Running HashiCorp Nomad and Consul on RISC-V"
+date = "2023-08-04"
 summary = "Discussing the process of getting Nomad and Consul running on a RISC-V computer and adding it to a cluster"
 tags = ["pine64", "star64", "risc-v", "cluster"]
 +++
