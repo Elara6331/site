@@ -1,4 +1,6 @@
-pipeline:
+platform: linux/amd64
+
+steps:
   build:
     image: klakegg/hugo:ext-alpine-ci
     commands:
