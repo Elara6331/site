@@ -247,6 +247,6 @@ Then, I modified my CI config to run `riscv64` tests using the new image and pus
 
 ![Screenshot of Woodpecker running a test job for PCRE on RISC-V](/img/woodpecker-riscv64-pcre.png)
 
-The job runs successfully!
+The job runs successfully! You can see this result on my Woodpecker instance: https://ci.elara.ws/repos/49/pipeline/5.
 
 That's pretty much it for this article, but I'm going to be doing lots of interesting stuff with this in the future and I'll be publishing more articles whenever I encounter anything interesting.
