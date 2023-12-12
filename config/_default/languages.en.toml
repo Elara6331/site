@@ -16,10 +16,9 @@ copyright = "Copyright &copy; Elara Musayelyan"
   name = "Elara Musayelyan"
   image = "img/nebula.jpg"
   headline = "Software Engineer"
-  bio = "A little bit about you"
+  bio = "I'm a FOSS developer who loves writing code and solving problems"
   links = [
     { email = "mailto:elara@elara.ws" },
     { gitea = "https://gitea.elara.ws/Elara6331" },
     { github = "https://github.com/Elara6331" },
-    #{ linkedin = "https://www.linkedin.com/in/arsen-musayelyan-9a850a1ab/" },
   ]
