@@ -2,7 +2,7 @@ platform: linux/amd64
 
 steps:
   build:
-    image: klakegg/hugo:ext-alpine-ci
+    image: hugomods/hugo:go-git
     commands:
       - hugo
       - tar czvf site.tar.gz public/
