@@ -1,4 +1,4 @@
-module go.arsenm.dev/site
+module go.elara.ws/site
 
 go 1.19
 
