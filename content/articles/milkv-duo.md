@@ -105,4 +105,4 @@ Anyway, I used this to calculate all the GPIO offsets, which I'll provide below 
 
 The Milk-V Duo is a really fun board to play with, and I encourage anyone who's interested in Linux and embedded programming to get one and try it out. You'll probably learn a lot and it'll be a lot of fun!
 
-They cost only $9, and you can usually find them for as low as $5. All you need is a USB-C cable. No serial adapter or debugger is required (though a serial adapter is nice to have for troubleshooting boot issues).
+They cost only $9, and you can usually find them for as low as $5. All you need is a USB-C cable and a microSD card. No serial adapter or debugger is required (though a serial adapter is nice to have for troubleshooting boot issues).
