@@ -27,9 +27,9 @@ However, that didn't sound fun. I'd just be importing a C library, and besides, 
 
 I started by searching for examples of using the character device API. Unfortunately, what little information I could find was for the deprecated v1 API which, to be fair, still works, but I wanted to use the v2 API, so I decided to read the kernel's source code to figure out how these ioctls worked. Specifically, I found the [`gpio.h`](https://github.com/torvalds/linux/blob/v5.10/include/uapi/linux/gpio.h#L500) file in Linux kernel 5.10 (the first version that implements the v2 API).
 
-That file has very good descriptions of what the various structs and fields are meant to be used for, but it doesn't provide any actual examples of how to use the API, so I decided to just try it anyway.
+That file has very good descriptions of what the various structs and fields are meant to be used for, but it doesn't provide any actual examples of how to use the API. I decided to just try it anyway.
 
-I started by writing rewriting each struct as a Zig `extern` struct. In the process, I learned a lot of interesting stuff about Zig, such as `packed` structs, for example, which make bit sets really easy to implement because each `bool` is stored as one bit, so you can just have a struct of `bool` fields that will act as a bit set.
+I started by rewriting each struct as a Zig `extern` struct. In the process, I learned a lot of interesting stuff about Zig, such as `packed` structs, for example, which make bit sets really easy to implement because each `bool` is stored as one bit, so you can just have a struct of `bool` fields that will act as a bit set.
 
 I also learned a lot about Zig's type system as I had to do things like accept an unknown number of offsets to request from the chip, use enums, unions, etc.
 
