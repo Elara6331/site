@@ -1,7 +1,7 @@
 +++
-title = "Using the Milk-V Duo RISC-V SBC"
+title = "Experimenting with the Milk-V Duo RISC-V Single Board Computer"
 date = "2023-12-12"
-summary = "My experience with the Milk-V Duo RISC-V Linux board"
+summary = "My experiments with the Milk-V Duo and how I wrote a Linux GPIO library in Zig"
 tags = ["milk-v", "duo", "risc-v", "zig"]
 +++
 
