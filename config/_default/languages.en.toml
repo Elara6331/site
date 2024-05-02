@@ -1,0 +1,23 @@
+title = "Elara"
+#description = "My awesome website"
+copyright = "Copyright &copy; Elara6331"
+
+[languages.en.params]
+  languageCode = "en"
+  languageName = "English"
+  displayName = "EN"
+  dateFormat = "January 2, 2006"
+  isoCode = "en"
+  weight = 1
+  rtl = false
+
+[params.author]
+  name = "Elara6331"
+  image = "img/nebula.jpg"
+  headline = "Software Engineer"
+  bio = "I'm a FOSS developer who loves writing code and solving problems"
+  links = [
+    { email = "mailto:elara@elara.ws" },
+    { gitea = "https://gitea.elara.ws/Elara6331" },
+    { github = "https://github.com/Elara6331" },
+  ]

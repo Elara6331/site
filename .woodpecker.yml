@@ -1,0 +1,29 @@
+platform: linux/amd64
+
+steps:
+  build:
+    image: hugomods/hugo:go-git
+    commands:
+      - hugo
+      - tar czvf site.tar.gz public/
+  
+  upload:
+    image: plugins/s3
+    settings:
+      endpoint: https://api.minio.elara.ws
+      path_style: true
+      bucket: site
+      access_key: AkdgUdmzEJBoiYa2
+      secret_key:
+        from_secret: minio_secret_key
+      source: site.tar.gz
+      target: /
+
+  deploy:
+    image: loq9/drone-nomad
+    settings:
+      addr: http://192.168.100.62:4646
+      template: template.nomad
+    environment:
+      - PLUGIN_WATCH_DEPLOYMENT=true
+      - PLUGIN_WATCH_DEPLOYMENT_TIMEOUT=10m
