@@ -11,7 +11,7 @@ This is a list of the free public services I host on my infrastructure. Services
 - [Gitea](https://gitea.elara.ws) - Git forge and alternative to GitHub <img src="/logo.png" width="20px" style="display: inline; margin: 0" alt="butterfly logo">
 - [OpenGist](https://snippets.elara.ws) - Paste and alternative to GitHub Gist <img src="/logo.png" width="20px" style="display: inline; margin: 0" alt="butterfly logo">
 - [Miniflux](https://rss.elara.ws) - Simple online RSS reader <img src="/logo.png" width="20px" style="display: inline; margin: 0" alt="butterfly logo">
-- [Chhoto](https://short.elara.ws) - Simple and fast URL shortener (uses `s.elara.ws` as its short domain) <img src="http://localhost:1313/logo.png" width="20px" style="display: inline; margin: 0" alt="butterfly logo">
+- [Chhoto](https://short.elara.ws) - Simple and fast URL shortener (uses `s.elara.ws` as its short domain) <img src="/logo.png" width="20px" style="display: inline; margin: 0" alt="butterfly logo">
 - [SearXNG](https://search.elara.ws) - Metasearch engine that aggregates results from various services
 - [LURE Web](https://lure.sh) - Online repo viewer for the Linux User Repository
 - [Authentik](https://auth.elara.ws) - Centralized authentication and anti-spam infrastructure
